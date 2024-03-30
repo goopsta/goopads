@@ -1,0 +1,21 @@
+
+{
+    "test_mode": false,
+
+    "auth" : {
+        "cookie" : "_roliverification here",
+        "userid" : 1
+    },
+
+    "config" : {
+        "delay" : 15,
+        "exclude_held" : false,
+        "downgrade_only" : false,
+        "upgrade_only" : false
+    },
+
+    "connections" : {
+        "webhook" : false,
+        "webhook_url" : "webhook url here"
+    }
+}
