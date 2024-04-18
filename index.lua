@@ -80,13 +80,17 @@ function init()
                 offering = alg.create_upgrade_offering(),
                 tags = {"upgrade"}
             })
-	    ad_type2 = "downgrade"
+	    if not config.config.upgrade_only then
+	   	ad_type2 = "downgrade"
+	    end
         else
             rolimons.post_ad({
                 offering = alg.create_downgrade_offering(),
                 tags = {"downgrade"}
             })
-	    ad_type2 = "upgrade"
+	    if not config.config.downgrade_only then
+	    	ad_type2 = "upgrade"
+	    end
         end
         
         log.msg("waiting "..config.config.delay.." minutes before sending out another ad...", "BLUE")
